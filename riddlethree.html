@@ -1,9 +1,42 @@
 <html>
     <head>
+        <style>
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333;
+        }
 
+        .bar li {
+          float: left;
+        }
+
+        .bar li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+
+        .bar li a:hover:not(.active) {
+        background-color: #111;
+        }
+
+        .active {
+          background-color: #95b2ba;
+        }
+        </style>
     </head>
 
     <body>
+        <ul class = "bar">
+            <li><a class = "active" href = "index.html"> Riddle #1 </a></li>
+            <li><a href = "riddletwo.html"> Riddle #2</a></li>
+            <li><a href = "riddlethree.html"> Riddle #3</a></li>
+        </ul>
         <h1 style="color:blue;">Riddle</h1>
         <h1 style="color:blue;">Time!</h1>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/Mc6VA7Q1vXQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -11,7 +44,7 @@
             <a href = "index.html"><li> Riddle #1 - Private Eye Riddle </li></a>
             <a href = "riddletwo.html"><li> Riddle #2 - Prisoner Hat Riddle </li></a>
             <a href = "riddlethree.html"><li> Riddle #3 - Pirate Riddle </li></a>
-        </ul>
+        </ul>        
         <h4> Instructions </h4>
         <ol>
             <li> Watch the video </li>
