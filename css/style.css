@@ -1,0 +1,190 @@
+body{
+        font: 15px/1.5 Arial, Helvetica, sans-serif;
+        padding: 0;
+        margin: 0;
+        background-color: #e9f1f7;
+    }
+    
+    .box img{
+        width: 100px;
+        height: 100px;
+    }
+    .container{
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+    }
+    
+        
+    ul{
+        margin: 0;
+        padding: 0;
+    }
+    
+    .button_1{
+        height: 38px;
+        background: #448fa3;
+        border: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+        color: #ffffff;
+    }
+    
+    .dark{
+        padding: 15px;
+        background: #02182b;
+        color: #ffffff;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    header{
+        background: #02182b;
+        color: #ffffff;
+        padding-top: 30px;
+        min-height: 70px;
+        border-bottom:#448fa3 3px solid;
+    }
+    
+    header a{
+        color: #ffffff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 16px;
+    }
+    
+    header li{
+        float: left;
+        display: inline;
+        padding: 0 20px 0 20px;
+    }
+    
+    header #intro{
+        float: left;
+    }
+    
+    header #intro h1{
+        margin: 0;
+    }
+    
+    header nav{
+        float: right;
+        margin-top: 10px;
+    }
+    
+    header .highlight, header .current a{
+        color:#448fa3;
+        font-weight: bold;
+    }
+    
+    header a:hover{
+        color: #cccccc;
+        font-weight: bold;
+    }
+    
+    #showcase{
+        min-height: 400px;
+        background: url('../img/scenery.jpg') no-repeat;
+        text-align: center;
+    }
+    
+    #showcase h1{
+        margin-top: 50px;
+        color: #ffffff;
+        font-size: 55px;
+        margin-bottom: 0px;
+    }
+    
+    #showcase h5{
+        margin-top: 0px;
+        color: #ffffff;
+        font-size: 20px;
+    }
+    
+    #contact{
+        padding: 15px;
+        color: #ffffff;
+        background: #02182b;
+    }
+    
+    #contact h1{
+        float: left;
+    }
+    
+    #contact form{
+        float: right;
+        margin-top: 15px;
+    }
+    
+    #contact input[type = "email"]{
+        padding: 4px;
+        height: 38px;
+        width: 250px;
+    }
+    
+    #boxes{
+        margin-top: 20px;
+    }
+    
+    #boxes .box{
+        float: left;
+        text-align: center;
+        width: 30%;
+        padding: 15px;
+    }
+    
+    aside#sidebar{
+        float:right;
+        width:30%;
+        margin-top: 52px;
+    }
+    
+    article#main-col{
+        margin-top: 52px;
+        float: left;
+        width: 65%;
+    }
+    
+    ul#projects li{
+        list-style: none;
+        padding: 20px;
+        border: #cccccc solid 1px;
+        margin-bottom: 5px;
+        background: #ffffff;
+    }
+    
+    footer{
+        padding: 20px;
+        margin-top: 20px;
+        color: #ffffff;
+        background-color:#448fa3;
+        text-align: center;
+    }
+    
+    @media  (max-width: 768px){
+        header #intro,
+        header nav,
+        header nav li,
+        #contact h1,
+        #contact form,
+        #boxes .box,
+        article#main-col,
+        aside#sidebar{
+            float: none;
+            text-align: center;
+            width: 100%;
+        }
+        header{
+            padding-bottom: 20px;
+        }
+        #showcase h1{
+            margin-top: 40px;
+        }
+        #contact button{
+            display: block;
+            width: 100%;
+        }
+        #contact form input[type="email"]{
+            width: 100%;
+            margin-bottom: 5px;
+        }
+    }
