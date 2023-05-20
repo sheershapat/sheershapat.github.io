@@ -1,0 +1,157 @@
+<html>
+<head>
+    <title>Sheersha Pattanaik</title>
+    <link rel="stylesheet" href="./../style.css">
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            opacity: 0;
+            animation: fade-in 1s ease-in-out forwards;
+        }
+        canvas {
+            border: 1px solid black;
+            display: block;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        .snake-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fade-in 1s ease-in-out forwards;
+            margin-top: 20px;
+        }
+
+        .snake-container img {
+            max-height: 300px;
+            width: auto;
+            margin-bottom: 20px;
+        }
+
+        .game-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            opacity: 0;
+            animation: fade-in 1s ease-in-out forwards;
+            position: relative;
+        }
+
+        #gameCanvas {
+            margin-top: 20px;
+        }
+
+        .game-over-message {
+            font-size: 24px;
+            color: #02182b;
+            margin-top: -200px;
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        /* Updated button style */
+        .restart-button {
+            display: none;
+            margin-top: -145px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            padding: 12px 20px;
+            background-color: #99bbcc;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #000;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .restart-button:hover {
+            background-color: #658da1;
+        }
+
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .current a {
+            color: red;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        #intro {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="intro">
+                <h1>More Games</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./tictactoe.html">Tic-Tac-Toe</a></li>
+                    <li class="current"><a href="./snake.html">Snake</a></li>
+                    <li><a href="./../index.html">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="game-container">
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <div class="snake-container">
+            <img src="./../img/snake.webp">
+        </div>
+        <div class="game-over-message" id="gameOverMessage"></div>
+        <button class="restart-button" id="restartButton">Restart Game</button>
+    </div>
+    <footer>
+        <p>Sheersha Pattanaik &copy; 2022</p>
+    </footer>
+    <script src="./../game2.js"></script>
+    <script>
+        const gameContainer = document.querySelector('.game-container');
+        gameContainer.style.opacity = 0;
+
+        setTimeout(() => {
+            gameContainer.style.animation = 'fade-in 1s ease-in-out forwards';
+        }, 100);
+    </script>
+</body>
+</html>

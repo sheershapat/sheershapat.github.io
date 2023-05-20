@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <title>Sheersha Pattanaik</title>
+        <link rel="stylesheet" href="./../style.css">
+        <style>
+            .container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 100px;
+                margin-bottom: 100px;
+                opacity: 0;
+                animation: fade-in 1s ease-in-out forwards;
+            }
+
+            .board-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                margin-top: 40px;
+                margin-bottom: 40px;
+                opacity: 0;
+                animation: fade-in 1s ease-in-out forwards;
+            }
+
+            .board {
+                display: grid;
+                grid-template-columns: repeat(3, 100px);
+                grid-template-rows: repeat(3, 100px);
+                gap: 6px;
+            }
+
+            .cell {
+                border: 1px solid black;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 3rem;
+                cursor: pointer;
+            }
+
+            .boxyy {
+                display: flex;
+                align-items: center;
+                margin-left: 20px;
+                opacity: 0;
+                animation: fade-in 1s ease-in-out forwards;
+            }
+
+            .boxyy img {
+                max-height: 300px; /* Adjust the max height as needed */
+                width: auto;
+            }
+
+            @keyframes fade-in {
+                0% {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .current a {
+                color: red; /* Change the color as desired */
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div id="intro">
+                    <h1>More Games</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li class="current"><a href="./tictactoe.html">Tic-Tac-Toe</a></li>
+                        <li><a href="./snake.html">Snake</a></li>
+                        <li><a href="./../index.html">Home</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="container">
+            <div class="board-container">
+                <div class="board">
+                    <div class="cell" data-index="0"></div>
+                    <div class="cell" data-index="1"></div>
+                    <div class="cell" data-index="2"></div>
+                    <div class="cell" data-index="3"></div>
+                    <div class="cell" data-index="4"></div>
+                    <div class="cell" data-index="5"></div>
+                    <div class="cell" data-index="6"></div>
+                    <div class="cell" data-index="7"></div>
+                    <div class="cell" data-index="8"></div>
+                </div>
+            </div>
+            <div class="boxyy">
+                <img src="./../img/tictactoe.png">
+            </div>
+        </div>
+        <script src="./../game.js"></script>
+        <footer>
+            <p>Sheersha Pattanaik &copy; 2022</p>
+        </footer>
+    </body>
+</html>
